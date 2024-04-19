@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://media.istockphoto.com/id/1415512899/photo/white-celsius-and-fahrenheit-scale-thermometer-in-hand-ambient-temperature-minus-4-degrees.webp?b=1&s=170667a&w=0&k=20&c=POEQ0pw4PBSxHOyym_tzsXIuknKz1tMCAUlRQlDuazo=');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+
+
+/* CSS for logo */
+.logo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-container img {
+    width: 10px; /* Adjust the width as needed */
+}
+
+
+          
+        
+    </style>
+</head>
+<body>
+
+
+
+
+    
+<div class="container">
+    <img src="https://cdn-icons-png.flaticon.com/128/2316/2316581.png" alt="Temperature Logo" width="50">
+    <h1>Temperature Converter</h1>
+    <div class="input-group">
+        <input type="number" id="celsiusInput" placeholder="Celsius">
+        <button onclick="convertToCelsius()">Convert to Celsius</button>
+    </div>
+    <div class="input-group">
+        <input type="number" id="fahrenheitInput" placeholder="Fahrenheit">
+        <button onclick="convertToFahrenheit()">Convert to Fahrenheit</button>
+    </div>
+    <div class="input-group">
+        <input type="number" id="kelvinInput" placeholder="Kelvin">
+        <button onclick="convertToKelvin()">Convert to Kelvin</button>
+    </div>
+    <div class="input-group">
+        <button onclick="clearFields()">Clear</button>
+    </div>
+</div>
+<script>
+
+
+    function convertToCelsius() {
+        var fahrenheit = document.getElementById("fahrenheitInput").value;
+        var celsius = (fahrenheit - 32) * 5 / 9;
+        document.getElementById("celsiusInput").value = celsius.toFixed(2);
+    }
+
+    function convertToFahrenheit() {
+        var celsius = document.getElementById("celsiusInput").value;
+        var fahrenheit = (celsius * 9 / 5) + 32;
+        document.getElementById("fahrenheitInput").value = fahrenheit.toFixed(2);
+    }
+
+    function convertToKelvin() {
+        var celsius = document.getElementById("celsiusInput").value;
+        var kelvin = parseFloat(celsius) + 273.15;
+        document.getElementById("kelvinInput").value = kelvin.toFixed(2);
+    }
+
+    function clearFields() {
+        document.getElementById("celsiusInput").value = "";
+        document.getElementById("fahrenheitInput").value = "";
+        document.getElementById("kelvinInput").value = "";
+    }
+</script>
+
+</body>
+</html>
