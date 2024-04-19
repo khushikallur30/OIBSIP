@@ -1,0 +1,194 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+    background-image: url('https://www.pixel4k.com/wp-content/uploads/2018/12/dark-red-black-abstract-4k_1546277906.jpg');
+    background-size: cover; 
+    background-position: center; 
+  }
+  
+
+
+.container {
+  max-width: 800px; 
+  margin: 0 auto;
+  padding: 20px;
+
+    background-image: url('https://www.pixel4k.com/wp-content/uploads/2018/12/dark-red-black-abstract-4k_1546277906.jpg'); 
+    background-size: cover;
+    background-position: center;
+  
+  
+}
+
+
+.container h1 {
+  color: #dfdfdf; 
+  text-align: center;
+  margin-top: 50px; 
+}
+
+
+
+#about {
+  padding: 20px;
+}
+
+#about h2 {
+  color: #dedbdb; 
+  text-align: center;
+  margin-bottom: 20px; 
+}
+
+#about p {
+  color: #e8e4e4; 
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #e2dfdf;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #d4d6d7;
+}
+
+
+h1 {
+  font-size: 36px;
+  text-align: center;
+}
+
+
+p#intro {
+  float: left;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 80px;
+  color: white;
+}
+
+
+.banner-img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: 400px;
+  margin-top: 20px;
+}
+
+
+
+.form-group {
+  margin-bottom: 20px;
+  color: white;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 100px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+.skills {
+  color: white;
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.html {width: 90%; background-color: #cb8904;}
+.css {width: 80%; background-color: #a71563;}
+.js {width: 65%; background-color: #f44336;}
+.sql {width: 60%; background-color: #262dc0;}
+.cpp {width: 80%; background-color: #1d627c;}
+
+
+
+
+#certificates {
+  color: white;
+  padding: 20px;
+}
+
+#certificates h2 {
+  margin-bottom: 20px;
+}
+
+.certificate {
+  margin-bottom: 40px;
+  display: inline-block; 
+  width: calc(50% - 20px); 
+  vertical-align: top; 
+}
+
+.certificate img {
+  max-width: 100%; 
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.certificate h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.certificate p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+
+
