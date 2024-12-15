@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Section</title>
+<link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+   
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Enter your search query">
+        <button onclick="search()">Search</button>
+        </div>
+    <div id="searchResults"></div>
+    
+    <script src="lp.js"></script> 
+    <title>Pastry Landing Page</title>
+</head>
+<style>
+
+   body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(207, 181, 185);
+    color: #333;
+    background-image: ('https://i.pinimg.com/736x/ce/3b/f0/ce3bf041df7d5198613a25918dc13196.jpg');
+    background-size: cover; 
+    background-position: center;
+   }
+  
+
+header {
+    background-color: #ff99cc;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #ff007f;
+}
+
+section p {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #ff99cc;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+section#menu img {
+    max-width: 300px; 
+    height: auto;
+}
+
+
+.search-container {
+    margin: 20px auto; 
+    text-align: center;
+    max-width: 800px; 
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 70%; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 15px 30px; 
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3; 
+}
+
+
+button {
+    vertical-align: middle; 
+    margin-left: 10px; 
+}
+
+
+
+.menu-container {
+    text-align: center; 
+}
+
+.menu-item {
+    display: inline-block;
+    width: calc(30% - 20px);
+    background-color: #f6f2f5;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 10px;
+    vertical-align: top; 
+    text-align: left; 
+}
+
+.menu-item h3 {
+    color: #ff007f;
+}
+
+.menu-item p {
+    margin-top: 10px;
+    color: #333;
+}
+
+.menu-item img {
+    max-width: 300%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button i {
+  margin-right: 5px;
+}
+
+#signin-btn {
+    float: right; 
+    margin-top: 10px; 
+    margin-right: 20px; 
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius:10%;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+#signin-btn img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+#contact {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+body {
+                      font-family: Arial, sans-serif;
+                      margin: 0;
+                      padding: 0;
+                    }
+                    
+                    header {
+                      background-color: rgb(235, 152, 196);
+                      padding: 20px;
+                      text-align: center;
+                    }
+                    
+                    h1 {
+                      font-size: 2em;
+                      margin-bottom: 0.5em;
+                    }
+                    
+                    p {
+                      font-size: 1em;
+                      margin-top: 0;
+                    }
+                    
+                    a {
+                      color: #333;
+                      text-decoration: none;
+                      padding: 10px 20px;
+                      border: 1px solid #ddd;
+                      border-radius: 3px;
+                    }
+                    
+                    a:hover {
+                      background-color: #ddd;
+                    }
+                    
+                   
+                    
+                    .hero {
+                      text-align: center;
+                      padding: 50px 0;
+                      background-image: url("images/background-pattern.jpg"); 
+                      background-repeat: repeat;
+                    }
+                    
+                    .hero img {
+                      width: 100%;
+                      max-width: 800px;
+                      margin: 0 auto;
+                    }
+                    
+                    .hero h2 {
+                      font-size: 2.5em;
+                      margin-bottom: 1em;
+                    }
+                    
+                    .hero p {
+                      font-size: 1.2em;
+                      margin-bottom: 2em;
+                    }
+                    
+                    .about,
+                    .products,
+                    .contact {
+                      padding: 50px 0;
+                    }
+                    
+                    .about h2,
+                    .products h2,
+                    .contact h2 {
+                      font-size: 2em;
+                      margin-bottom: 1em;
+                      text-align: center;
+                    }
+                    
+                   
+                    
+                    footer {
+                      background-color: #868186;
+                      padding: 20px;
+                      text-align: center;
+                    }
+
+                    .cart-icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+
+        #cart-icon {
+    width: 30px; 
+    height: 30px;
+    margin-right: 5px; 
+}
+
+#cart-count {
+    background-color: #8b2a71; 
+    color: #fff; 
+    padding: 3px 8px; 
+    border-radius: 50%; 
+    font-size: 14px; 
+}
+
+
+
+        
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+#cartModal {
+    display: none; 
+    position: fixed; 
+    z-index: 9999; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 20% auto; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.clear-cart-button {
+    background-color: #f44336; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.clear-cart-button:hover {
+    background-color: #da190b; 
+}
+
+
+
+
+
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #ff007f;
+}
+
+section p {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #ff99cc;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+section#menu img {
+    max-width: 300px; 
+    height: auto;
+}
+
+
+.search-container {
+    margin: 20px auto; 
+    text-align: center;
+    max-width: 800px;
+} 
+
+input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 15px 30px; 
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3; 
+}
+
+
+button {
+    vertical-align: middle; 
+    margin-left: 10px; 
+}
+
+
+
+.menu-container {
+    text-align: center; 
+}
+
+.menu-item {
+    display: inline-block;
+    width: calc(30% - 20px);
+    background-color: #f6f2f5;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 10px;
+    vertical-align: top; 
+    text-align: left; 
+}
+
+.menu-item h3 {
+    color: #ff007f;
+}
+
+.menu-item p {
+    margin-top: 10px;
+    color: #333;
+}
+
+.menu-item img {
+    max-width: 300%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button i {
+  margin-right: 5px;
+}
+
+#signin-btn {
+    float: right; 
+    margin-top: 10px;
+    margin-right: 20px; 
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius:10%;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+#signin-btn img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+#contact {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+body {
+                      font-family: Arial, sans-serif;
+                      margin: 0;
+                      padding: 0;
+                    }
+                    
+                    header {
+                      background-color: rgb(235, 152, 196);
+                      padding: 20px;
+                      text-align: center;
+                    }
+                    
+                    h1 {
+                      font-size: 2em;
+                      margin-bottom: 0.5em;
+                    }
+                    
+                    p {
+                      font-size: 1em;
+                      margin-top: 0;
+                    }
+                    
+                    a {
+                      color: #333;
+                      text-decoration: none;
+                      padding: 10px 20px;
+                      border: 1px solid #ddd;
+                      border-radius: 3px;
+                    }
+                    
+                    a:hover {
+                      background-color: #ddd;
+                    }
+                  
+                    
+                    .hero {
+                      text-align: center;
+                      padding: 50px 0;
+                      background-image: url("images/background-pattern.jpg"); 
+                      background-repeat: repeat;
+                    }
+                    
+                    .hero img {
+                      width: 100%;
+                      max-width: 800px;
+                      margin: 0 auto;
+                    }
+                    
+                    .hero h2 {
+                      font-size: 2.5em;
+                      margin-bottom: 1em;
+                    }
+                    
+                    .hero p {
+                      font-size: 1.2em;
+                      margin-bottom: 2em;
+                    }
+                    
+                    .about,
+                    .products,
+                    .contact {
+                      padding: 50px 0;
+                    }
+                    
+                    .about h2,
+                    .products h2,
+                    .contact h2 {
+                      font-size: 2em;
+                      margin-bottom: 1em;
+                      text-align: center;
+                    }
+                    
+                   
+                    
+                    footer {
+                      background-color: #868186;
+                      padding: 20px;
+                      text-align: center;
+                    }
+
+                    .cart-icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+
+        #cart-icon {
+    width: 30px; 
+    height: 30px; 
+    margin-right: 5px; 
+}
+
+#cart-count {
+    background-color: #8b2a71; 
+    color: #fff; 
+    padding: 3px 8px; 
+    border-radius: 50%; 
+    font-size: 14px;
+}
+
+
+
+        
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+#cartModal {
+    display: none; 
+    position: fixed; 
+    z-index: 9999; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 20% auto; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.clear-cart-button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.clear-cart-button:hover {
+    background-color: #da190b; 
+}
+
+
+
+
+
+</style>
+<body class="backimg">
+    <header>
+        <h1>Welcome to Our  Happy Pastry Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Menu">Menu</a></li>
+                <li><a href="#Customer Reviews">Customer Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="lp.html" id="signin-btn"><img src="https://cdn-icons-png.flaticon.com/128/5539/5539922.png" alt="Sign In"></a></li>
+                <li><a href="#" onclick="showCart()"><img src="https://cdn-icons-png.flaticon.com/128/419/419910.png" alt="Cart" id="cart-icon"> <span id="cart-count">0</span></a></li>
+            </ul>               
+        </nav>
+      </header>
+   
+      
+
+<div id="cartModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Cart Items</h2>
+    <ul id="cartItemsList"></ul>
+    <p>Total Cost: <span id="totalCost"></span></p>
+    <button onclick="clearCart()">Clear Cart</button> 
+    <button onclick="buyNow()">Buy Now</button>
+
+  </div>
+</div>
+
+
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <img src="p1.png" alt="Description of the image">
+        <p>Welcome to [Happy Pastry Shop]! We are dedicated to crafting artisanal pastries that tantalize your taste buds and delight your senses. Our passion for pastry perfection drives us to use only the finest ingredients sourced locally and internationally. From flaky croissants to decadent cakes and delicate macarons, each of our creations is made with love and meticulous attention to detail. Whether you're craving a morning treat or planning a special occasion, we invite you to experience the magic of our pastries. Visit us today and embark on a delicious journey of indulgence!.</p>
+        </section>
+    <section id="menu">
+        <h2>Our Pastry Selection</h2>
+        <div class="menu-item">
+            <h3>Blueberry baked cheesecake</h3>
+            <div class="image-container">
+              <img src="blueberrybakedcheesecake.webp" alt="Description of the image">
+              
+            </div>
+            <p>Blueberries just got comforting as they came in with our cheesecake.</p>
+            <p>Cost: ₹ 849.00  quantity: 1kg</p>
+            <button onclick="addToCart('Blueberry baked cheesecake')">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <h3>Devils Mousse Pastry</h3>
+            <img src="DevilsMoussePastry02.webp" alt="Description of the image">
+            <p>Our Devils Mousse Pastry is a chocolate mousse baked on a sponge base, giving it a smooth and light texture. It is made without flour and therefore is ideal for those looking for a gluten free treat.
+                <p>Cost: ₹ 140.00  quantity: 1kg</p>
+                <button onclick="addToCart('Devils Mousse Pastry')">Add to Cart</button>
+            </p>
+        </div>
+        <div class="menu-item">
+            <h3>Eggless Fresh Fruit & Cream Pastry</h3>
+            <img src="HIGHRESFruitandCustardPastry01-Square_e44779fc-dbc5-4351-b910-adad91c8c01c.webp" alt="Description of the image">
+            <p>Bursting with fresh & fruity flavours, it is made with layers of vanilla sponge, fluffy whipped cream,  juicy fresh fruits & fruit compote, topped with seasonal fresh fruits</p>
+            <p>Cost: ₹ 155.00  quantity: 1kg</p>
+            <button onclick="addToCart('Eggless Fresh Fruit & Cream Pastry')">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <h3>Assorted Box Of Pastries (4 Pc)</h3>
+            <img src="HIGHRESAssortedPastryBox-SquareWebsite.webp" alt="Description of the image">
+            <p>An assortment of our best-selling pastries - Dutch Truffle Pastry (1), Fresh Cream Pineapple Pastry (1), Red Velvet Pastry (1) & Opium Pastry (1)</p>
+            <p>Cost: ₹ 530.00 </p> 
+            <button onclick="addToCart('Assorted Box Of Pastries (4 Pc)')">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <h3>Choco Chip Brownie</h3>
+            <img src="ChocoChipBrownie.jpg" alt="Description of the image">
+            <p>Our classic Choco Chip Brownie is a gooey chocolate brownie loaded with dark chocolate chips. It is a dense fudgy brownie made with pure couverture chocolate, that will simply melt in your mouth.</p>
+            <p>Cost: ₹ 105.00 </p> 
+            <button onclick="addToCart('Choco Chip Brownie')">Add to Cart</button>
+        </div>
+    </div>
+    <div class="menu-item">
+        <h3>Walnut Brownie</h3>
+        <img src="WalnutBrownie02.webp" alt="Description of the image">
+        <p>An old-time classic, our Walnut Brownie is made by folding toasted chopped walnuts into our chocolate brownie batter. The crunchy texture of walnuts contrasts beautifully against the smooth chocolate brownie, make this a decadent delight! </p>
+        <p>Cost: ₹ 110.00 </p> 
+        <button onclick="addToCart('Walnut Brownie')">Add to Cart</button>
+    </div>
+</div>
+<div class="menu-item">
+    <h3>Oreo Brownie</h3>
+    <img src="HIGHRESOreoBrownie-InstagramSquare.webp" alt="Description of the image">
+    <p>Rich chocolate brownie loaded with chopped Oreo cookies, topped with a dark chocolate ganache and Oreo cookies. </p>
+    <p>Cost: ₹ 95.00 </p> 
+    <button onclick="addToCart('Oreo Brownie')">Add to Cart</button>
+</div>
+</div>
+<div class="menu-item">
+    <h3>Cookie Brownie</h3>
+    <img src="CookieBrownie.jpg" alt="Description of the image">
+    <p>Our Cookie Brownie combines the best of two great products in one outstanding brownie! A classic chocolate brownie base is topped with a layer of chocolate chip cookie dough, resulting in a brownie that is twice as delicious!</p>
+    <p>Cost: ₹ 105.00 </p> 
+    <button onclick="addToCart('Cookie Brownie')">Add to Cart</button>
+</div>
+</div>
+<div class="menu-item">
+    <h3>Tiramisu Cup </h3>
+    <img src="Tiramisu-Square.webp" alt="Description of the image">
+    <p>Mascarpone custard, whipped cream, rum flavour and coffee soaked sponge.</p>
+    <p>Cost: ₹ 150.00 </p> 
+    <button onclick="addToCart('Tiramisu Cup')">Add to Cart</button>
+</div>
+
+
+<section id="reviews">
+  <h2>Customer Reviews</h2>
+  <div class="review">
+      <h3>John Doe</h3>
+      <p>Amazing pastries! The Blueberry baked cheesecake is my favorite.</p>
+      <div class="rating">
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9734;</span>
+      </div>
+  </div>
+  <div class="review">
+      <h3> Smith</h3>
+      <p>The Eggless Fresh Fruit & Cream Pastry was so delicious! Will definitely order again.</p>
+      <div class="rating">
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+      </div>
+  </div>
+  <div class="review">
+    <h3>rosee</h3>
+    <p>the Walnut Brownie,It was so delicious.</p>
+    <div class="rating">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+    </div><div class="review">
+      <h3>Johnson</h3>
+      <p>"I ordered the Assorted Box Of Pastries for a small gathering, and they were a hit! Each pastry was flavorful and beautifully presented.".</p>
+      <div class="rating">
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+      </div>
+    
+</section>
+
+
+
+<section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form action="contact.php" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+
+ 
+  
+<script src="lp.js"></script>
+    
+</body>
+</html>
